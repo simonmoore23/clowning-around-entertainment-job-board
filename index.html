@@ -12,7 +12,7 @@
 
     <header>
         <h1>Job Board</h1>
-        <button class="login-button" onclick="redirectToLogin()">Log In</button>
+        <button id="loginBtn" onclick="redirectToLogin()">Log In</button>
     </header>
 
     <section>
@@ -34,6 +34,24 @@
     <footer>
         <p>&copy; 2024 Job Board</p>
     </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <!-- This part is where the form information will go - placeholder for now -->
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
 <script src="./assets/js/script.js"></script>
 </body>
 
