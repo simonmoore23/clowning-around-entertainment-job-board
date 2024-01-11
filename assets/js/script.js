@@ -13,3 +13,19 @@ function filterJobs() {
         }
     });
 }
+function openModal() {
+    document.getElementById('loginModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('loginModal').style.display = 'none';
+}
+
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Add your login logic here from backend - Tomasz reviewing via handlebars?!
+    // For example, check credentials and redirect if successful
+
+    
+    closeModal(); // Closes the modal after successful login
+});
