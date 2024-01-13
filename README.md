@@ -20,14 +20,28 @@ It uses
 ## User Story
 ```md
 AS an an employer of a circus entertainment company
-I WANT to advertise my current job vacancies for specialist performers
+I WANT to advertise my current job vacancies and save old adverts for specialist performers 
 SO THAT I can easily find new talent to join our show
 ```
 
 ## Acceptance Criteria
 ```md
-GIVEN an employer recruitment job board#
-WHEN...
+GIVEN an employer wants to hire for his team...
+WHEN I first visit the website 
+THEN I want to see a list of adverts currently advertised.
+WHEN I first visit the website
+THEN I want to see a clearly defined log-in button to use to log-in.
+WHEN I am logging in
+THEN I want to be able to see my password as I type it.
+WHEN I am logged in 
+THEN I want to see new buttons appear that allow me to post a new advert.
+WHEN I am editing an advert
+THEN I want to be able to the options to save the advert as a unique template OR delete the advert.
+WHEN I have posted my advert
+THEN I want to see the advert appear in the list of adverts on the homepage.
+WHEN I view the list of adverts
+THEN I want to be able to order them by LOCATION, JOB TYPE and JOB TITLE.
+
 
 ```
 ## Installation Process
