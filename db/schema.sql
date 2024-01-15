@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS recruitment_db;
+
+CREATE DATABASE IF NOT EXISTS recruitment_db;
