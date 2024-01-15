@@ -4,7 +4,7 @@ const User = require('./user');
 //associations
 User.hasMany(Post, {
   foreignKey: 'user_id',
-  onDelete: CASCADE,
+  onDelete: 'CASCADE',
 });
 Post.belongsTo(User, {
   foreignKey: 'user_id',
