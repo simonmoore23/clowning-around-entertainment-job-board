@@ -23,7 +23,7 @@ function closeModal() {
 
 document.getElementById('loginForm').addEventListener('submit', function (event) {
     event.preventDefault();
-    // Add your login logic here from backend - Tomasz reviewing via handlebars?!
+    // Add the login logic here for password length min and max
     // For example, check credentials and redirect if successful
 
     

@@ -82,19 +82,30 @@ footer {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%); /* This controlls where the modal sits in the screen -50% and -150% make it sit in the middle. */
 }
 
+.modal-content form label,
+.modal-content for input {
+    display: block;
+    margin-bottom: 10px; /*adjust the maximum to give more height between input fields in login modal */
+}
+
+/* Add styling for the close button */
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
