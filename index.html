@@ -11,23 +11,52 @@
 <body>
 
     <header>
-        <h1>CLOWNING AROUND</h1>
-        <button id="login-button" onclick="openModal()">Log In</button>
+        <div class="header-container">
+            <div class="header-left">
+                <img src="./assets/images/clown.jpg" id="clown">
+                <h1 id="header-text">CLOWNING AROUND Inc.</h1>
+            </div>
+            <div class="header-right">
+                <button id="login-button" onclick="openModal()">Log In</button>
+            </div>
+        </div>
     </header>
 
-    <section>
+    <section class="container">
         <div class="job-listing">
-            <!-- <h2 class="job-title">Senior Clown</h2>
-            <p class="job-company">Mighty Mike's Mighty Magicians</p>
-            <p class="job-description">We are looking for a skilled juggler to join our clown team.</p> -->
+            <H3>New Job Opening Example</H3>
+            <p>We want good peeps to join our show selling neeps</p>
         </div>
 
         <div class="job-listing">
-            <!-- <h2 class="job-title">Example job</h2>
-            <p class="job-company">Example company</p>
-            <p class="job-description">Example description</p> -->
+            <H3>New Job Opening Example</H3>
+            <p>We want good peeps to join our show selling neeps</p>
         </div>
 
+        <div class="job-listing">
+            <H3>New Job Opening Example</H3>
+            <p>We want good peeps to join our show selling neeps</p>
+        </div>
+
+        <div class="job-listing">
+            <H3>New Job Opening Example</H3>
+            <p>We want good peeps to join our show selling neeps</p>
+        </div>
+
+        <div class="job-listing">
+            <H3>New Job Opening Example</H3>
+            <p>We want good peeps to join our show selling neeps</p>
+        </div>
+
+        <div class="job-listing">
+            <H3>New Job Opening Example</H3>
+            <p>We want good peeps to join our show selling neeps</p>
+        </div>
+
+        <div class="job-listing">
+            <H3>New Job Opening Example</H3>
+            <p>We want good peeps to join our show selling neeps</p>
+        </div>
         <!-- Add more job listings as needed -->
     </section>
 
@@ -38,21 +67,21 @@
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            
+
             <!-- This part is where the form information will go - placeholder for now -->
             <h2>Login</h2>
             <form id="loginForm">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
-    
+
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
-    
+
                 <button type="submit" class="login-button">Login</button>
             </form>
         </div>
     </div>
-<script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
