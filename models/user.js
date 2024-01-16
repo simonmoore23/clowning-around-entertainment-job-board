@@ -54,14 +54,14 @@ User.init(
     hooks: {
       async beforeCreate(newUser) {
         newUser.password = await bcrypt.hash(newUser.password, 10);
-        newUser.email = await newUser.email.toLowercase();
-        newUser.postcode = await newUser.postcode.toUppercase();
+        newUser.email = await newUser.email.toLowerCase();
+        newUser.postcode = await newUser.postcode.toUpperCase();
         return newUser;
       },
       async beforeUpdate(updateUser) {
         updateUser.password = await bcrypt.hash(updateUser.password, 10);
-        updateUser.email = await updateUser.email.toLowercase();
-        updateUser.postcode = await updateUser.postcode.toUppercase();
+        updateUser.email = await updateUser.email.toLowerCase();
+        updateUser.postcode = await updateUser.postcode.toUpperCase();
       },
     },
     sequelize,
