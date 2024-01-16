@@ -2,7 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
-class User extends Model {}
+class User extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 User.init(
   {
@@ -54,14 +58,14 @@ User.init(
     hooks: {
       async beforeCreate(newUser) {
         newUser.password = await bcrypt.hash(newUser.password, 10);
-        newUser.email = await newUser.email.toLowercase();
-        newUser.postcode = await newUser.postcode.toUppercase();
+        newUser.email = await newUser.email.toLowerCase();
+        newUser.postcode = await newUser.postcode.toUpperCase();
         return newUser;
       },
       async beforeUpdate(updateUser) {
         updateUser.password = await bcrypt.hash(updateUser.password, 10);
-        updateUser.email = await updateUser.email.toLowercase();
-        updateUser.postcode = await updateUser.postcode.toUppercase();
+        updateUser.email = await updateUser.email.toLowerCase();
+        updateUser.postcode = await updateUser.postcode.toUpperCase();
       },
     },
     sequelize,
