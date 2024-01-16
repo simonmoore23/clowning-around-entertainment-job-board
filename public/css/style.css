@@ -1,151 +1,166 @@
-    body {
-        font-family: cursive;
-        margin: 0;
-        padding: 0;
-        background-image: url('/images/Circus_BG_2.jpeg');
-    }
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    background-image: url('/images/Circus_BG_2.jpeg');
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
 
-    .header-left {
-        color: #fff;
-        margin-left: 15px;
-        padding: 10px;
-        text-align: left;
-        display: flex;
-        align-items: center;
-    }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .header-right {
-        color: #fff;
-        padding: 10px;
-        text-align: right;
-    }
+.header-left {
+    color: #fff;
+    margin-left: 15px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
 
-    #clown {
-        width: 50px;
-        /* Adjust the width as needed */
-        height: 50px;
-        /* Adjust the height as needed */
-        margin-right: 10px;
-        /* Add some margin for spacing */
-    }
+.header-right {
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
 
-    #header-text {
-        color: Black;
-        font-family: cursive;
-    }
+#clown {
+    width: 50px;
+    /* Adjust the width as needed */
+    height: 50px;
+    /* Adjust the height as needed */
+    margin-right: 10px;
+    /* Add some margin for spacing */
+}
 
-    .login-button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        text-align: center;
-        text-decoration: none;
-        font-family: cursive;
-        font-size: 14px;
-        cursor: pointer;
-        border-radius: 8px;
-    }
+#header-text {
+    color: Black;
+    font-family: cursive;
+}
 
-    /* .container {
-    margin: 20px auto;
-    padding: 20px;
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: cursive;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* .container {
+margin: 20px auto;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+} */
+
+.container2 {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 175px;
+    /* background-color: #fff; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-image: url('/images/Old_Scroll_PNG_Clipart.png');
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100vw 150vh;
+    /* background-attachment: fixed; */
+}
+
+.job-listing {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.job-title {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.job-company {
+    color: #777;
+}
+
+.job-description {
+    color: #555;
+}
+
+/* footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+margin: 25px;
+padding: 10px;
+position: fixed;
+bottom: 0;
+width: 100%;
 } */
 
-    .container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .job-listing {
-        border-bottom: 1px solid #ccc;
-        padding: 10px 0;
-    }
-
-    .job-title {
-        font-size: 1.2em;
-        color: #333;
-    }
-
-    .job-company {
-        color: #777;
-    }
-
-    .job-description {
-        color: #555;
-    }
-
-    /* footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    margin: 25px;
-    padding: 10px;
+.modal {
+    display: none;
     position: fixed;
-    bottom: 0;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
-} */
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    /* This controlls where the modal sits in the screen -50% and -150% make it sit in the middle. */
+}
 
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 25%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -150%);
-        /* This controlls where the modal sits in the screen -50% and -150% make it sit in the middle. */
-    }
+.modal-content form label,
+.modal-content for input {
+    display: block;
+    margin-bottom: 10px;
+    /*adjust the maximum to give more height between input fields in login modal */
+}
 
-    .modal-content form label,
-    .modal-content for input {
-        display: block;
-        margin-bottom: 10px;
-        /*adjust the maximum to give more height between input fields in login modal */
-    }
+/* Add styling for the close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-    /* Add styling for the close button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-    }
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
