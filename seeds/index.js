@@ -9,12 +9,16 @@ const seedAll = async () => {
     individualHooks: true,
     returning: true,
   });
-  for (const user of postSeed) {
-    await Post.create({
-      ...user,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+
+  // console.log(users)
+  // const userData = users.map((user)=>user.get({plain:true}))
+  //console.log(userData)
+
+  const postInfo = await Post.bulkCreate(postSeed)
+  const postData= postInfo.map((post)=>post.get({plain:true}))
+
+  // console.log(postData)
+
   process.exit(0);
 };
 
