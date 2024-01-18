@@ -96,17 +96,6 @@ body {
     color: #555;
 }
 
-/* footer {
-background-color: #333;
-color: #fff;
-text-align: center;
-margin: 25px;
-padding: 10px;
-position: fixed;
-bottom: 0;
-width: 100%;
-} */
-
 .modal {
     display: none;
     position: fixed;
@@ -121,22 +110,28 @@ width: 100%;
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin-left: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 25%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -150%);
-    /* This controlls where the modal sits in the screen -50% and -150% make it sit in the middle. */
+    transform: translate(-50%, -50%); /* This controlls where the modal sits in the screen -50% and -150% make it sit in the middle. */
 }
 
-.modal-content form label,
-.modal-content for input {
+.modal-content form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.modal-content form input {
     display: block;
     margin-bottom: 10px;
-    /*adjust the maximum to give more height between input fields in login modal */
+    margin-left: 5px;
+    max-width: 100%; /* Set maximum width to 100% */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 /* Add styling for the close button */
@@ -153,3 +148,45 @@ width: 100%;
     color: black;
     text-decoration: none;
 }
+
+.register-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.register-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This controlls where the modal sits in the screen -50% and -150% make it sit in the middle. */
+}
+
+.register-modal-content form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register-modal-content form input {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    max-width: 100%; /* Set maximum width to 100% */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+  }
