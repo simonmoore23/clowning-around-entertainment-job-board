@@ -1,15 +1,8 @@
-body {
+    body {
     font-family: cursive;
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-image: url('/images/Circus_BG_2.jpeg');
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
+    background: repeating-linear-gradient(to right, white, white 10%, yellow 10%, yellow 20%, red 20%, red 30%, yellow 30%, yellow 40%, red 40%, red 50%, yellow 50%, yellow 60%, red 60%, red 70%, yellow 70%, yellow 80%, red 80%, red 90%);
 }
 
 .header-container {
@@ -34,14 +27,10 @@ body {
 }
 
 #clown {
-    width: 50px;
-    /* Adjust the width as needed */
-    height: 50px;
-    /* Adjust the height as needed */
-    margin-right: 10px;
-    /* Add some margin for spacing */
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add some margin for spacing */
 }
-
 #header-text {
     color: Black;
     font-family: cursive;
@@ -60,22 +49,25 @@ body {
     border-radius: 8px;
 }
 
-.container2 {
-    max-width: 1000px;
-    margin: 10px auto;
-    padding: 175px;
-    /* box-shadow: 100px 100px 100px 100px rgba(0, 0, 0, 0.1); */
+/* .container {
+    margin: 20px auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-image: url('/images/Old_Scroll_PNG_Clipart.png');
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100% 100%;
-    /* background-attachment: fixed; */
+} */
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .job-listing {
@@ -97,14 +89,14 @@ body {
 }
 
 /* footer {
-background-color: #333;
-color: #fff;
-text-align: center;
-margin: 25px;
-padding: 10px;
-position: fixed;
-bottom: 0;
-width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin: 25px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 } */
 
 .modal {
@@ -128,15 +120,13 @@ width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -150%);
-    /* This controlls where the modal sits in the screen -50% and -150% make it sit in the middle. */
+    transform: translate(-50%, -150%); /* This controlls where the modal sits in the screen -50% and -150% make it sit in the middle. */
 }
 
 .modal-content form label,
 .modal-content for input {
     display: block;
-    margin-bottom: 10px;
-    /*adjust the maximum to give more height between input fields in login modal */
+    margin-bottom: 10px; /*adjust the maximum to give more height between input fields in login modal */
 }
 
 /* Add styling for the close button */
