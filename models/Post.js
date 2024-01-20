@@ -11,7 +11,7 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    job_title: {
+    jobTitle: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -26,7 +26,7 @@ Post.init(
         isNumeric: true,
       },
     },
-    user_id: {
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

@@ -3,11 +3,11 @@ const User = require('./User');
 
 //associations
 User.hasMany(Post, {
-  foreignKey: 'user_id',
+  foreignKey: 'userId',
   onDelete: 'CASCADE',
 });
 Post.belongsTo(User, {
-  foreignKey: 'user_id',
+  foreignKey: 'userId',
 });
 
 module.exports = { User, Post };
