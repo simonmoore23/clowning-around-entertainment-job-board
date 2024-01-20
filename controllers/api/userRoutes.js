@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
-      userName: req.body.userName,
+      username: req.body.username,
       password: req.body.password,
       companyName: req.body.companyName,
       postcode: req.body.postcode,
