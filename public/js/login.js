@@ -25,9 +25,11 @@ async function loginFormHandler(event) {
 async function signupFormHandler(event) {
   event.preventDefault();
 
-  const username = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+  const username = document.querySelector('#regUsername').value.trim();
+  const password = document.querySelector('#regPassword').value.trim();
+  const companyName = document.querySelector('#companyName').value.trim();
+  const postcode = document.querySelector('#postcode').value.trim();
+  const email = document.querySelector('#email').value.trim();
 
   if (username && email && password) {
     const response = await fetch('/users', {
@@ -51,9 +53,9 @@ async function signupFormHandler(event) {
 }
 
 document
-  .querySelector('.login-form')
+  .querySelector('#loginForm')
   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('.signup-form')
+  .querySelector('#registerForm')
   .addEventListener('submit', signupFormHandler);
