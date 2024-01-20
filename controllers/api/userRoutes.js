@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
-      userName: req.body.userName,
+      username: req.body.username,
       password: req.body.password,
       companyName: req.body.companyName,
       postcode: req.body.postcode,
@@ -66,7 +66,11 @@ router.post('/login', async (req, res) => {
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
     });
-
+    if (req.session.loggedIn) {
+      console.log('logged in yea');
+    } else {
+      console.log('not logged in');
+    }
     // console.log(req.session);
   } catch (err) {
     console.log(err);
