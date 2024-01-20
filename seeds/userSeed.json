@@ -1,22 +1,22 @@
 [
   {
-    "user_name": "BozoTheClown",
+    "username": "BozoTheClown",
     "password": "comedyispain",
-    "company_name": "The Guild of Fools and Joculators and College of Clowns",
+    "companyName": "The Guild of Fools and Joculators and College of Clowns",
     "postcode": "SM5 1RS",
     "email": "bozo@foolsguild.com"
   },
   {
-    "user_name": "hungrylion99",
+    "username": "hungrylion99",
     "password": "tuSerasMange",
-    "company_name": "The Best Circus in The World",
+    "companyName": "The Best Circus in The World",
     "postcode": "PA33 1AN",
     "email": "notalion@geemail.com"
   },
   {
-    "user_name": "ILiftTractors",
+    "username": "ILiftTractors",
     "password": "superStrong",
-    "company_name": "Muscle for hire",
+    "companyName": "Muscle for hire",
     "postcode": "TA12 6LB",
     "email": "bigmuscle@muscle.com"
   }

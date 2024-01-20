@@ -16,7 +16,7 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -30,7 +30,7 @@ User.init(
       allowNull: false,
       // validate min max string length at html form to avoid unnecessary api calls
     },
-    company_name: {
+    companyName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
