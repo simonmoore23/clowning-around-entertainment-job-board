@@ -5,8 +5,29 @@ const { openModal } = require('../public/js/script.js');
 // const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  res.render('all', { loggedIn: req.session.loggedIn });
+  try {
+    const postData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['companyName'],
+        },
+      ],
+    });
+    //serialize
+    const posts = postData.map((post) => post.get({ plain: true }));
+    res.render('all', {
+      posts,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+
+// router.get('/', async (req, res) => {
+//   res.render('all', { loggedIn: req.session.loggedIn });
+// });
 
 module.exports = router;
 
