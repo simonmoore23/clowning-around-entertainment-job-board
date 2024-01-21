@@ -66,7 +66,7 @@ router.post('/login', async (req, res) => {
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
     });
-    if (req.session.loggedIn) {
+    if ((req.session.loggedIn = true)) {
       console.log('logged in yea');
     } else {
       console.log('not logged in');
