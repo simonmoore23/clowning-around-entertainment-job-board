@@ -3,7 +3,7 @@ const { Post, User } = require('../models');
 // const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  res.render('all');
+  res.render('all', { loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;
