@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { Post, User } = require('../models');
+const { openModal } = require('../public/js/script.js');
+
 // const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -7,6 +9,14 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;
+
+router.get('/profile', async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.render('/');
+    return;
+  }
+  res.render('profile');
+});
 
 // router.get('/login', (req, res) => {
 //   // If the user is already logged in, redirect the request to another route

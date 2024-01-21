@@ -1,3 +1,5 @@
+// const { Script } = require('vm');
+
 // drop down for filtering jobs by type. triggered when the selection changes with a hide feature on type of job chosen.
 function filterJobs() {
   const jobTypeFilter = document.getElementById('jobType').value;
@@ -17,12 +19,13 @@ function filterJobs() {
 function closeModal() {
   document.getElementById('loginModal').style.display = 'none';
 }
-document
-  .getElementById('loginForm')
-  .addEventListener('submit', loginFormHandler);
-document
-  .getElementById('registerForm')
-  .addEventListener('submit', signupFormHandler);
+// document
+//   .getElementById('loginForm')
+//   .addEventListener('submit', loginFormHandler);
+// document
+//   .getElementById('registerForm')
+//   .addEventListener('submit', signupFormHandler);
+
 // function submitLogin() {
 //   // Retrieve the entered username and password
 //   const username = document.getElementById('username').value;
@@ -45,10 +48,10 @@ document
 //   }
 // }
 
-function openModal() {
+const openModal = () => {
   const loginModal = document.getElementById('loginModal');
   loginModal.style.display = 'block';
-}
+};
 function openRegisterModal() {
   const registerModal = document.getElementById('registerModal');
   registerModal.style.display = 'block';
@@ -119,3 +122,5 @@ function updateButtonVisibility() {
     postJobButton.style.display = 'none';
   }
 }
+
+module.exports = { openModal };
