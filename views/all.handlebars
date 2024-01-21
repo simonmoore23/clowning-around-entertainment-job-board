@@ -42,7 +42,9 @@
       <h3>
         <a id='post-title' href='/posts/{{post.id}}'>{{post.jobTitle}}</a>
       </h3>
-      <h5 class='employee-inf'>{{user.companyName}}, £{{post.salary}}</h5>
+      <h5 class='employee-inf'>{{user.companyName}}, £{{numeral
+          post.salary
+        }}</h5>
       <div id='post-body'>
         <p>
           {{post.description}}
