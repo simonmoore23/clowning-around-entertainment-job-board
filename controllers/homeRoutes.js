@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Post, User } = require('../models');
-const { openModal } = require('../public/js/script.js');
 
 // const withAuth = require('../utils/auth');
 
@@ -14,6 +13,7 @@ router.get('/', async (req, res) => {
         },
       ],
     });
+
     //serialize
     const posts = postData.map((post) => post.get({ plain: true }));
     res.render('all', {
