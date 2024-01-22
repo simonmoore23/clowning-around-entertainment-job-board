@@ -27,7 +27,6 @@
             <button id='logoutButton'>Logout</button>
             <button
               id='postJobButton'
-              style='display: none'
               onclick='openPostJobModal()'
             >Post a New Job</button>
           {{else}}
@@ -100,22 +99,21 @@
     </div>
 
 <!-- PostJob modal HTML here -->
-  
-    <div id='registerModal' class='modal'>
-      <div class='modal-content'>
-      <span class=‘close’ onclick=‘closeJobPostModal()’>&times;</span>
+
+<div id="jobPostModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeJobPostModal()">×</span>
       <h2>Create New Job Post:</h2>
-      <form id=‘jobPostForm’>
-        <label for=‘jobTitle’>Job Title:</label>
-        <input type=‘text’ id=‘jobTitle’ name=‘jobTitle’ placeholder=“Trapeze Artist, etc.” required />
-        <label for=‘jobDescription’>Job Description:</label>
-        <input class=“job-description” type=‘textarea’ id=‘jobDescription’ name=‘Description’
-          placeholder=“Enter details of role here” required />
-        <label for=‘jobSalary’>Salary:</label>
-        <input type=‘text’ id=‘jobSalary’ name=‘jobSalary’ pattern=“^\£\d{1,3}(,\d{3})*(\.\d+)?$” placeholder=“Enter Amount” required />
-        <div class=‘button-container’>
-          <button type=‘submit’ class=‘login-button’>Submit</button>
-          <button type=‘button’ class=‘login-button’ onclick=‘closeJobPostModal()’>Cancel</button>
+      <form id="jobPostForm">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="Trapeze Artist, etc." required="">
+        <label for="jobDescription">Job Description:</label>
+        <input class="job-description" type="text" id="jobDescription" name="Description" placeholder="Enter details of role here" required="">
+        <label for="jobSalary">Salary:</label>
+        <input type="text" id="jobSalary" name="jobSalary" pattern="^\£\d{1,3}(,\d{3})*(\.\d+)?$" placeholder="Enter Amount" required="">
+        <div class="button-container">
+          <button type="submit" class="login-button">Submit</button>
+          <button type="button" class="login-button" onclick="closeJobPostModal()">Cancel</button>
         </div>
       </form>
     </div>
