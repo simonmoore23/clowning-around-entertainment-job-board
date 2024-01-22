@@ -69,6 +69,24 @@ function closeRegisterModal() {
   registerModal.style.display = 'none';
 }
 
+function openProfileModal() {
+  const registerModal = document.getElementById('profileModal');
+  registerModal.style.display = 'block';
+
+  // Retrieve input fields when opening the modal
+  document.getElementById('companyName').value = '';
+  document.getElementById('postcode').value = '';
+  document.getElementById('townName').value = '';
+  document.getElementById('regionName').value = '';
+  document.getElementById('email').value = '';
+
+}
+
+function closeProfileModal() {
+  const profileModal = document.getElementById('profileModal');
+  profileModal.style.display = 'none';
+}
+
 // Retrieve values from the registration form
 // const username = document.getElementById('regUsername').value;
 // const password = document.getElementById('regPassword').value;
