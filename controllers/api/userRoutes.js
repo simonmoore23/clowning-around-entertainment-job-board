@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
       updateLoc(data);
     };
     //update the user with region and town
-    let updateLoc = async (data) => {
+    let updateLoc = async (data, user) => {
       const updateLoc = await User.update(
         {
           region: data.result.region,
@@ -41,8 +41,7 @@ router.post('/', async (req, res) => {
         },
         {
           where: {
-            region: null,
-            town: null,
+            username: req.body.username,
           },
         }
       );
