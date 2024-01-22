@@ -98,6 +98,39 @@ function closePostJobModal() {
 //   updateButtonVisibility();
 // }
 
+
+function openPostJobModal () {
+  const postJobModal = document.getElementById('jobPostModal');
+  postJobModal.style.display = 'block';
+
+  // Clear the input fields when opening the modal
+  document.getElementById('jobTitle').value = '';
+  document.getElementById('jobDescription').value = '';
+  document.getElementById('jobSalary').value = '';
+
+const currencyField = document.getElementById('jobSalary');
+currencyField.addEventListener('focus', () => {
+  currencyField.type = 'number';
+}); 
+
+currencyField.addEventListener('blur', () => {
+  const amount = parseFloat(currencyField.value);
+  const formattedCurrency = formatCurrency(amount); 
+  currencyField.type = 'text';
+  currencyField.value = formattedCurrency;
+});
+
+function formatCurrency(amount) {
+  const formatter = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' });
+  return formatter.format(amount);
+}
+}
+
+function closeJobPostModal() {
+  const postJobModal = document.getElementById('jobPostModal');
+  postJobModal.style.display = 'none';
+}
+
 function updateButtonVisibility() {
   const loginButton = document.getElementById('loginButton');
   const registerButton = document.getElementById('registerButton');
@@ -122,4 +155,5 @@ function updateButtonVisibility() {
   }
 }
 
-module.exports = { openModal };
+module.exports = { openModal, openPostJobModal, closeJobPostModal };
+

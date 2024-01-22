@@ -29,7 +29,10 @@
               <button id='profileButton'>Profile</button>
             </a>
             <button id='logoutButton'>Logout</button>
-            
+            <button
+              id='postJobButton'
+              onclick='openPostJobModal()'
+            >Post a New Job</button>
           {{else}}
             <button id='loginButton' onclick='openModal()'>Login</button>
             <button
@@ -98,6 +101,48 @@
         </form>
       </div>
     </div>
+
+<!-- PostJob modal HTML here -->
+
+<div id="jobPostModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeJobPostModal()">×</span>
+      <h2>Create New Job Post:</h2>
+      <form id="jobPostForm">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="Trapeze Artist, etc." required="">
+        <label for="jobDescription">Job Description:</label>
+        <input class="job-description" type="text" id="jobDescription" name="Description" placeholder="Enter details of role here" required="">
+        <label for="jobSalary">Salary:</label>
+        <input type="text" id="jobSalary" name="jobSalary" pattern="^\£\d{1,3}(,\d{3})*(\.\d+)?$" placeholder="Enter Amount" required="">
+        <div class="button-container">
+          <button type="submit" class="login-button">Submit</button>
+          <button type="button" class="login-button" onclick="closeJobPostModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<!-- PostJob modal HTML here -->
+
+<div id="jobPostModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeJobPostModal()">×</span>
+      <h2>Create New Job Post:</h2>
+      <form id="jobPostForm">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="Trapeze Artist, etc." required="">
+        <label for="jobDescription">Job Description:</label>
+        <input class="job-description" type="text" id="jobDescription" name="Description" placeholder="Enter details of role here" required="">
+        <label for="jobSalary">Salary:</label>
+        <input type="text" id="jobSalary" name="jobSalary" pattern="^\£\d{1,3}(,\d{3})*(\.\d+)?$" placeholder="Enter Amount" required="">
+        <div class="button-container">
+          <button type="submit" class="login-button">Submit</button>
+          <button type="button" class="login-button" onclick="closeJobPostModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
 {{!-- profile modal HTML here--}}
 <div id='profileModal' class='modal'>
