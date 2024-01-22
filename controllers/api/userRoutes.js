@@ -21,11 +21,40 @@ router.post('/', async (req, res) => {
       email: req.body.email,
     });
 
+    //GET location from postcode
+    let getLoc = async (postcode) => {
+      let response = await fetch(
+        `https://api.postcodes.io/postcodes/${postcode}`,
+        {
+          method: 'GET',
+        }
+      );
+      const data = await response.json();
+      updateLoc(data);
+    };
+    //update the user with region and town
+    let updateLoc = async (data) => {
+      const updateLoc = await User.update(
+        {
+          region: data.result.region,
+          town: data.result.parish,
+        },
+        {
+          where: {
+            region: null,
+            town: null,
+          },
+        }
+      );
+    };
+
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.userId = dbUserData.id;
       res.status(200).json(dbUserData);
+      res.status(200).json(updateLoc);
+      getLoc(req.body.postcode);
     });
   } catch (err) {
     console.log(err);
