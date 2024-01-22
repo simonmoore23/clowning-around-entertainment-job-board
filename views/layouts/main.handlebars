@@ -21,15 +21,15 @@
         </div>
         <div class='header-right' id='buttonContainer'>
           {{#if loggedIn}}
+          <button
+              id='postJobButton'
+              onclick='openPostJobModal()'
+            >Post a New Job</button>
             <a href='/profile'>
               <button id='profileButton'>Profile</button>
             </a>
             <button id='logoutButton'>Logout</button>
-            <button
-              id='postJobButton'
-              style='display: none'
-              onclick='openPostJobModal()'
-            >Post a New Job</button>
+            
           {{else}}
             <button id='loginButton' onclick='openModal()'>Login</button>
             <button
@@ -41,7 +41,7 @@
       </div>
     </header>
 
-    <!-- modal HTML here -->
+    <!-- Login modal HTML here -->
     <div id='loginModal' class='modal'>
       <div class='modal-content'>
         <span class='close' onclick='closeModal()'>&times;</span>
@@ -93,6 +93,39 @@
               type='button'
               class='login-button'
               onclick='closeRegisterModal()'
+            >Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+{{!-- profile modal HTML here--}}
+<div id='profileModal' class='modal'>
+      <div class='modal-content'>
+        <span class='close' onclick='closeProfileModal()'>&times;</span>
+        <h2>Register</h2>
+        <form id='profileForm'>
+          <label for='companyName'>Company Name:</label>
+          <input type='text' id='companyName' name='companyName' required />
+
+          <label for='postcode'>Postcode:</label>
+          <input type='text' id='postcode' name='postcode' required />
+
+          <label for='companyName'>Town:</label>
+          <input type='text' id='companyName' name='townName' required />
+
+          <label for='postcode'>Region:</label>
+          <input type='text' id='regionName' name='regionName' required />
+
+          <label for='email'>Email:</label>
+          <input type='email' id='email' name='email' required />
+          
+          <div class='button-container'>
+            <button type='submit' class='login-button'>Submit</button>
+            <button
+              type='button'
+              class='login-button'
+              onclick='closeProfileModal()'
             >Cancel</button>
           </div>
         </form>

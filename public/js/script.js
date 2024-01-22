@@ -19,34 +19,6 @@ function filterJobs() {
 function closeModal() {
   document.getElementById('loginModal').style.display = 'none';
 }
-// document
-//   .getElementById('loginForm')
-//   .addEventListener('submit', loginFormHandler);
-// document
-//   .getElementById('registerForm')
-//   .addEventListener('submit', signupFormHandler);
-
-// function submitLogin() {
-//   // Retrieve the entered username and password
-//   const username = document.getElementById('username').value;
-//   const password = document.getElementById('password').value;
-
-//   // Replace the example credentials with your actual credentials check logic
-//   const correctUsername = 'exampleUser';
-//   const correctPassword = 'examplePassword';
-
-//   // Check if the entered credentials match the correct credentials
-//   if (username === correctUsername && password === correctPassword) {
-//     console.log('Login successful');
-//     // Perform actions after successful login, such as redirecting to another page
-//     closeModal(); // Close the modal after successful login
-//     // Update button visibility after login
-//     updateButtonVisibility();
-//   } else {
-//     console.log('Invalid credentials');
-//     // Handle invalid credentials, show an error message, etc.
-//   }
-// }
 
 const openModal = () => {
   const loginModal = document.getElementById('loginModal');
@@ -87,6 +59,15 @@ function closeProfileModal() {
   profileModal.style.display = 'none';
 }
 
+function openPostJobModal() {
+  const registerModal = document.getElementById('postJobModal');
+  registerModal.style.display = 'block';
+}
+
+function closePostJobModal() {
+  const registerModal = document.getElementById('postJobModal');
+  registerModal.style.display = 'none';
+}
 // Retrieve values from the registration form
 // const username = document.getElementById('regUsername').value;
 // const password = document.getElementById('regPassword').value;
