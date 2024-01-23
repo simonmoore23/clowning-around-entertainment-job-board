@@ -278,3 +278,9 @@ body {
     width: 50%; /* Make the Edit Profile button full-width */
     margin-top: 15px; /* Add some top margin for spacing */
 }
+
+/* All links in website will change from blue color with below settings */
+a {
+    color: white; /* Set your desired color */
+    text-decoration: none; /* Remove the default underline */
+}
