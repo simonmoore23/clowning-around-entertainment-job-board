@@ -240,7 +240,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: left;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -249,7 +249,8 @@ body {
 }
 
 .profileUserListing,
-.profileBottomRight {
+.profileBottomRight,
+.profileJobListing {
     width: 100%;
     /* background-color: rgba(6, 34, 6, 0.608); */
     color: black;
