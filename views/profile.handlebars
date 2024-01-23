@@ -1,33 +1,33 @@
-<div class="profileContainer">
-  <section class="profileContainerLeft">
     {{#each posts as |post|}}
-      <div class="profileJobListing">
+<div class='profileContainer'>
+  <section class='profileContainerLeft'>
+
+      <div class='profileJobListing'>
         <h3><a
-            id="post-title"
-            href="/posts/{{post.id}}"
+            id='post-title'
+            href='/posts/{{post.id}}'
           >{{post.jobTitle}}</a></h3>
       </div>
-    {{/each}}
+    
   </section>
 
-  <section class="profileContainerRight">
-    <div class="profileUserListing">
+  <section class='profileContainerRight'>
+    <div class='profileUserListing'>
       <h3>Company Name:
-        <span class="companyNameDisplay">{{companyName}}</span></h3>
-      <h3>Postcode: <span class="postcodeDisplay">{{postcode}}</span></h3>
-      <h3>Town: <span class="townNameDisplay">{{townName}}</span></h3>
-      <h3>Region: <span class="regionNameDisplay">{{regionName}}</span></h3>
-      <h3>Email: <span class="emailDisplay">{{email}}</span></h3>
+        <span class='companyNameDisplay'>{{user.companyName}}</span></h3>
+      <h3>Postcode: <span class='postcodeDisplay'>{{user.postcode}}</span></h3>
+      <h3>Town: <span class='townNameDisplay'>{{user.town}}</span></h3>
+      <h3>Region: <span class='regionNameDisplay'>{{user.region}}</span></h3>
+      <h3>Email: <span class='emailDisplay'>{{user.email}}</span></h3>
     </div>
 
-    
-      <div class="profileBottomRight">
-        <button
-          id="openProfileModal"
-          class="button"
-          onclick="openProfileModal()"
-        >Edit Profile</button>
-      </div>
-    
+    <div class='profileBottomRight'>
+      <button
+        id='openProfileModal'
+        class='button'
+        onclick='openProfileModal()'
+      >Edit Profile</button>
+    </div>
+{{/each}}
   </section>
 </div>
