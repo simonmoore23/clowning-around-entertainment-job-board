@@ -8,8 +8,7 @@ const withAuth = require('../utils/auth');
 //     res.render('/');
 //     return;
 //   }
-//   res.render('profile', { loggedIn: req.session.loggedIn });
-// });
+
 router.get('/', withAuth, async (req, res) => {
   try {
     const dbPostData = await Post.findAll({
@@ -21,11 +20,18 @@ router.get('/', withAuth, async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: [
+            'username',
+            'password',
+            'companyName',
+            'postcode',
+            'region',
+            'town',
+            'email',
+          ],
         },
       ],
     });
-
     const posts = dbPostData.map((post) => post.get({ plain: true }));
     res.render('profile', { posts, loggedIn: true });
     // })

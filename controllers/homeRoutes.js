@@ -26,10 +26,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// router.get('/', async (req, res) => {
-//   res.render('all', { loggedIn: req.session.loggedIn });
-// });
-
 module.exports = router;
 
 // router.get('/login', (req, res) => {
