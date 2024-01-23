@@ -1,54 +1,55 @@
-async function editUser(event) {
-    event.preventDefault();
-  
-    // get the blog id from the url
-    // const id = window.location.toString().split('/')[
-    //     window.location.toString().split('/').length - 1
-    // ];
-  
-    // if (event.target.hasAttribute('data-id')) {
-    //   const id = event.target.getAttribute('data-id')
-  
-    // Get the post title and post text from the form
-    const username = document.querySelector("#").value;
-    const password = document.querySelector("#").value;
-    const companyName = document.querySelector("#").value;
-    const postcode = document.querySelector("#").value;
-    const email = document.querySelector("#").value;
-    const region = document.querySelector("#").value;
-    const town = document.querySelector("#").value;
-    // use the update route to update the post
-    const response = await fetch(`/user/${id}`, {
-        method: 'PUT',
-        body: JSON.stringify({
-          username,
-          password,
-          companyName,
-          postcode,
-          email,
-          region,
-          town,
-        }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-    // if the edit action is successful, redirect to the dashboard page, otherwise display the error
-    if (response.ok) {
-        document.location.replace('/profile');
-        } else {
-        alert(response.statusText);
-        }
-  
+async function editUserFormHandler(event) {
+  event.preventDefault();
+
+  // get the blog id from the url
+  // const id = window.location.toString().split('/')[
+  //     window.location.toString().split('/').length - 1
+  // ];
+  // const id = window.location.toString().split('/')[
+  //   window.location.toString().split('/').length - 1
+  // ];
+  // if (event.target.hasAttribute('data-id')) {
+  //   const id = event.target.getAttribute('data-id')
+
+  // Get the post title and post text from the form
+  // const username = document.querySelector('#').value;
+  // const password = document.querySelector('#').value;
+  const companyName = document.querySelector('#updateCompanyName').value;
+  const postcode = document.querySelector('#updatePostcode').value;
+  const email = document.querySelector('#updateEmail').value;
+  const region = document.querySelector('#updateRegionName').value;
+  const town = document.querySelector('#updateTownName').value;
+  // use the update route to update the post
+  const response = await fetch(`/profile/`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      companyName,
+      postcode,
+      town,
+      region,
+      email,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  // if the edit action is successful, redirect to the dashboard page, otherwise display the error
+  if (response.ok) {
+    document.location.replace('/profile');
+  } else {
+    alert(response.statusText);
   }
-  
-  document.querySelector('.edit-user-form').addEventListener('submit', editFormHandler);
+}
+
+document
+  .querySelector('#profileFormEdit')
+  .addEventListener('submit', editUserFormHandler);
 
 //   function updateUserData() {
 //     // Gather user input from the form
 //     var username = document.getElementById('usernameInput').value;
 //     var email = document.getElementById('emailInput').value;
-//     var 
+//     var
 //     // Prepare data to be sent to the server for updating user information
 //     var userData = {
 //         username: username,
@@ -58,7 +59,7 @@ async function editUser(event) {
 
 //     // Use Fetch API to send the data to the server for processing
 //     fetch(`/user/${userId}/update`, {
-//         method: 'PUT', // Assuming you use the PUT method for updates
+//         method: 'PUT', // Assuming you use the PUT method for update
 //         headers: {
 //             'Content-Type': 'application/json',
 //         },
