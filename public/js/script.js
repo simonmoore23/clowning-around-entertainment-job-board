@@ -54,11 +54,11 @@ function openProfileModal() {
 
   // Assuming you have an object with the existing profile data
   const userProfileData = {
-    companyName: 'ExistingCompanyName',
-    postcode: 'ExistingPostcode',
-    townName: 'ExistingTownName',
-    regionName: 'ExistingRegionName',
-    email: 'existing@email.com',
+    companyName: '',
+    postcode: '',
+    townName: '',
+    regionName: '',
+    email: '',
   };
 
   companyNameInput.value = userProfileData.companyName;
