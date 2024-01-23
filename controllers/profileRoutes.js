@@ -39,7 +39,6 @@ router.get('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-module.exports = router;
 
 router.put('/', async (req, res) => {
   try {
@@ -53,7 +52,7 @@ router.put('/', async (req, res) => {
       },
       {
         where: {
-          id: req.session.id,
+          id: req.session.userId,
         },
       }
     );
@@ -67,3 +66,5 @@ router.put('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+module.exports = router;
