@@ -48,10 +48,10 @@ body {
     font-family: cursive;
 }
 
-.login-button {
-    background-color: #6aab6c;
+.button {
+    background-color: #612d22;
     color: white;
-    border: none;
+    border: solid 1px white;
     padding: 10px 15px;
     text-align: center;
     text-decoration: none;
@@ -221,39 +221,48 @@ body {
 }
 
 /* styles.css */
-
 .profileContainer {
     display: flex;
     min-height: 400px;
     height: auto;
-    justify-content: space-between;
+    color: black;
+    justify-content: space-around;
     align-items: stretch;
-  }
-  
-  .profileContainerLeft {
-        width: 48%;
-    background-color: rgba(6, 34, 6, 0.608);
-    padding: 15px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .profileContainerRight {
+}
+
+.profileContainerLeft,
+.profileContainerRight {
     width: 48%;
     background-color: rgba(6, 34, 6, 0.608);
+    color: black;
     padding: 15px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    align-items: left;
+    text-align: left;
+    text-decoration: none;
+}
 
-  /* This controls the width of the "Edit profile" button in the profile section */
-  #openProfileModal {
-    width: 75%;
-  }
-  
+.profileContainerLeft {
+    margin-right: 15px; /* Adjust the margin for spacing between the two containers */
+}
+
+.profileUserListing,
+.profileBottomRight {
+    width: 100%;
+    /* background-color: rgba(6, 34, 6, 0.608); */
+    color: black;
+    margin: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+#openProfileModal {
+    width: 50%; /* Make the Edit Profile button full-width */
+    margin-top: 15px; /* Add some top margin for spacing */
+}
