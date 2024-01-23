@@ -16,11 +16,13 @@
     <header>
       <div class="header-container">
         <div class="header-left">
-          <img src="/images/clown.png" id="clown" />
+                    <img src="/images/clown.png" id="clown" />
           <h1 id="header-text">CLOWNING AROUND Inc.</h1>
+          
         </div>
         <div class="header-right" id="buttonContainer">
           {{#if loggedIn}}
+          <a href="http://localhost:3001"><button id="goHome" class="button" onclick="goHardOrGoHome">Home</button></a>
             <button id="postJobButton" class="button" onclick="openPostJobModal()">Post a New
               Job</button>
             <a href="/profile">
@@ -28,6 +30,7 @@
             </a>
             <button id="logoutButton" class="button">Logout</button>
           {{else}}
+            <a href="http://localhost:3001"><button id="goHome" class="button" onclick="goHardOrGoHome">Home</button></a>
             <button id="loginButton" class="button" onclick="openModal()">Login</button>
             <button
               id="registerButton" class="button" onclick="openRegisterModal()">Register</button>
