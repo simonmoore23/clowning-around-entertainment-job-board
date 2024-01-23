@@ -40,3 +40,30 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 module.exports = router;
+
+router.put('/', async (req, res) => {
+  try {
+    const dbUserData = await User.update(
+      {
+        companyName: req.body.companyName,
+        postcode: req.body.postcode,
+        town: req.body.town,
+        region: req.body.region,
+        email: req.body.email,
+      },
+      {
+        where: {
+          id: req.session.id,
+        },
+      }
+    );
+    if (!dbUserData[0]) {
+      res.status(404).json({ message: 'No user found with this id' });
+      return;
+    }
+    res.status(200).json(dbUserData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
