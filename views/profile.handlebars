@@ -7,10 +7,11 @@
         <p><a
             id="post-title"
             href="/apply/{{post.id}}"
-          >{{post.jobTitle}}</a></p>
-<button class="button button-sm button-danger" post-id="{{post.id}}">DELETE</button>
+          >{{post.jobTitle}}</a>
+<button class="button" post-id="{{post.id}}">DELETE</button>
+</p>
       </div>
-     
+     {{/each}}
     
   </section>
 
@@ -34,6 +35,6 @@
         onclick='openProfileModal()'
       >Edit Profile</button>
     </div>
-{{/each}}
+
   </section>
 </div>
