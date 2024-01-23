@@ -103,14 +103,14 @@
             required=""
           />
           <label for="jobDescription">Job Description:</label>
-          <input
+          <textarea
             class="job-description"
-            type="text"
             id="jobDescription"
             name="Description"
             placeholder="Enter details of role here"
             required=""
-          />
+            cols="25"
+          /></textarea>
           <label for="jobSalary">Salary:</label>
           <input
             type="text"
@@ -127,6 +127,7 @@
         </form>
       </div>
     </div>
+
 
     <!-- PostJob modal HTML here -->
     <div id="jobPostModal" class="modal">
@@ -200,6 +201,7 @@
     <script src="./js/logout.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/editUser.js"></script>
   </body>
 
 </html>

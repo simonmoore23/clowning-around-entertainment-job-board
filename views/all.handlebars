@@ -1,10 +1,9 @@
-
 <section class='container2'>
   {{#each posts as |post|}}
 
     <div class='job-listing'>
       <h3>
-        <a id='post-title' href='/posts/{{post.id}}'>{{post.jobTitle}}</a>
+        <a id='post-title' href='/apply/{{post.id}}'>{{post.jobTitle}}</a>
       </h3>
       <h5 class='employee-inf'>{{user.companyName}}, £{{numeral
           post.salary

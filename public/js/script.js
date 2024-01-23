@@ -68,83 +68,99 @@ function openProfileModal() {
   emailInput.value = userProfileData.email;
 }
 
-document.getElementById('profileForm').addEventListener('submit', async function (event) {
-  event.preventDefault();
+// document
+//   .getElementById('profileForm')
+//   .addEventListener('submit', async function (event) {
+//     event.preventDefault();
 
-  // Retrieve updated profile information from the form
-  const updatedCompanyName = document.getElementById('updatedCompanyName').value;
-  const updatedPostcode = document.getElementById('updatedPostcode').value;
-  const updatedTownName = document.getElementById('updatedTownName').value;
-  const updatedRegionName = document.getElementById('updatedRegionName').value;
-  const updatedEmail = document.getElementById('updatedEmail').value;
-});
+//     // Retrieve updated profile information from the form
+//     const updatedCompanyName =
+//       document.getElementById('updatedCompanyName').value;
+//     const updatedPostcode = document.getElementById('updatedPostcode').value;
+//     const updatedTownName = document.getElementById('updatedTownName').value;
+//     const updatedRegionName =
+//       document.getElementById('updatedRegionName').value;
+//     const updatedEmail = document.getElementById('updatedEmail').value;
+//   });
 
 function closeProfileModal() {
   const profileModal = document.getElementById('profileModal');
   profileModal.style.display = 'none';
 }
 
+//Function/button handler to update user profile
+// document
+//   .getElementById('profileForm')
+//   .addEventListener('submit', async function editProfile(event) {
+//     event.preventDefault();
 
-document.getElementById('profileForm').addEventListener('submit', async function (event) {
-  event.preventDefault();
+//     // Retrieve updated profile information from the form
+//     const updatedCompanyName =
+//       document.getElementById('updatedCompanyName').value;
+//     const updatedPostcode = document.getElementById('updatedPostcode').value;
+//     const updatedTownName = document.getElementById('updatedTownName').value;
+//     const updatedRegionName =
+//       document.getElementById('updatedRegionName').value;
+//     const updatedEmail = document.getElementById('updatedEmail').value;
 
-  // Retrieve updated profile information from the form
-  const updatedCompanyName = document.getElementById('updatedCompanyName').value;
-  const updatedPostcode = document.getElementById('updatedPostcode').value;
-  const updatedTownName = document.getElementById('updatedTownName').value;
-  const updatedRegionName = document.getElementById('updatedRegionName').value;
-  const updatedEmail = document.getElementById('updatedEmail').value;
+//     try {
+//       // Send a PUT request to the server to update the user's profile
+//       const response = await fetch(`/users/`, {
+//         method: 'PUT',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({
+//           companyName: updatedCompanyName,
+//           postcode: updatedPostcode,
+//           townName: updatedTownName,
+//           regionName: updatedRegionName,
+//           email: updatedEmail,
+//         }),
+//       });
 
-  try {
-    // Send a POST request to the server to update the user's profile
-    const response = await fetch('/update-profile', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        companyName: updatedCompanyName,
-        postcode: updatedPostcode,
-        townName: updatedTownName,
-        regionName: updatedRegionName,
-        email: updatedEmail,
-      }),
-    });
+//       if (response.ok) {
+//         console.log('Profile updated successfully');
 
-    if (response.ok) {
-      console.log('Profile updated successfully');
+//         // Update the displayed profile information in profileContainerRight
+//         const profileContainerRight = document.querySelector(
+//           '.profileContainerRight'
+//         );
+//         const companyNameDisplay = profileContainerRight.querySelector(
+//           '.companyNameDisplay'
+//         );
+//         const postcodeDisplay =
+//           profileContainerRight.querySelector('.postcodeDisplay');
+//         const townNameDisplay =
+//           profileContainerRight.querySelector('.townNameDisplay');
+//         const regionNameDisplay =
+//           profileContainerRight.querySelector('.regionNameDisplay');
+//         const emailDisplay =
+//           profileContainerRight.querySelector('.emailDisplay');
 
-      // Update the displayed profile information in profileContainerRight
-      const profileContainerRight = document.querySelector('.profileContainerRight');
-      const companyNameDisplay = profileContainerRight.querySelector('.companyNameDisplay');
-      const postcodeDisplay = profileContainerRight.querySelector('.postcodeDisplay');
-      const townNameDisplay = profileContainerRight.querySelector('.townNameDisplay');
-      const regionNameDisplay = profileContainerRight.querySelector('.regionNameDisplay');
-      const emailDisplay = profileContainerRight.querySelector('.emailDisplay');
+//         companyNameDisplay.textContent = updatedCompanyName;
+//         postcodeDisplay.textContent = updatedPostcode;
+//         townNameDisplay.textContent = updatedTownName;
+//         regionNameDisplay.textContent = updatedRegionName;
+//         emailDisplay.textContent = updatedEmail;
 
-      companyNameDisplay.textContent = updatedCompanyName;
-      postcodeDisplay.textContent = updatedPostcode;
-      townNameDisplay.textContent = updatedTownName;
-      regionNameDisplay.textContent = updatedRegionName;
-      emailDisplay.textContent = updatedEmail;
+//         // Close the profile modal after updating the profile
+//         closeProfileModal();
+//       } else {
+//         console.error('Failed to update profile');
+//         // Handle errors, show a message to the user, etc.
+//       }
+//     } catch (error) {
+//       console.error('Error:', error);
+//       // Handle network errors or other issues
+//     }
 
-      // Close the profile modal after updating the profile
-      closeProfileModal();
-    } else {
-      console.error('Failed to update profile');
-      // Handle errors, show a message to the user, etc.
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    // Handle network errors or other issues
-  }
-
-  // Close the profile modal after updating the profile
-  closeProfileModal();
-});
+//     // Close the profile modal after updating the profile
+//     closeProfileModal();
+//   });
 
 // Job posting modal
-function openPostJobModal () {
+function openPostJobModal() {
   const postJobModal = document.getElementById('jobPostModal');
   postJobModal.style.display = 'block';
 
@@ -153,22 +169,27 @@ function openPostJobModal () {
   document.getElementById('jobDescription').value = '';
   document.getElementById('jobSalary').value = '';
 
-const currencyField = document.getElementById('jobSalary');
-currencyField.addEventListener('focus', () => {
-  currencyField.type = 'number';
-}); 
+  const currencyField = document.getElementById('jobSalary');
+  currencyField.addEventListener('focus', () => {
+    currencyField.type = 'number';
+  });
 
-currencyField.addEventListener('blur', () => {
-  const amount = parseFloat(currencyField.value);
-  const formattedCurrency = formatCurrency(amount); 
-  currencyField.type = 'text';
-  currencyField.value = formattedCurrency;
-});
+  currencyField.addEventListener('blur', () => {
+    if (currencyField.value !== '') {
+      const amount = parseFloat(currencyField.value);
+      const formattedCurrency = formatCurrency(amount);
+      currencyField.type = 'text';
+      currencyField.value = formattedCurrency;
+    }
+  });
 
-function formatCurrency(amount) {
-  const formatter = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' });
-  return formatter.format(amount);
-}
+  function formatCurrency(amount) {
+    const formatter = new Intl.NumberFormat('en-GB', {
+      style: 'currency',
+      currency: 'GBP',
+    });
+    return formatter.format(amount);
+  }
 }
 
 function closeJobPostModal() {
@@ -201,4 +222,3 @@ function updateButtonVisibility() {
 }
 
 module.exports = { openModal, openPostJobModal, closeJobPostModal };
-
