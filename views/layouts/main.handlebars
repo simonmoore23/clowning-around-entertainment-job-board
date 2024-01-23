@@ -21,6 +21,8 @@
         </div>
         <div class="header-right" id="buttonContainer">
           {{#if loggedIn}}
+          <a href="http://localhost:3001"><button id="homeButton" class="button" onclick="goHardOrGoHome">Home</button>
+            </a>
             <button id="postJobButton" class="button" onclick="openPostJobModal()">Post a New
               Job</button>
             <a href="/profile">
@@ -28,6 +30,8 @@
             </a>
             <button id="logoutButton" class="button">Logout</button>
           {{else}}
+          <a href="http://localhost:3001"><button id="homeButton" class="button" onclick="goHardOrGoHome">Home</button>
+            </a>
             <button id="loginButton" class="button" onclick="openModal()">Login</button>
             <button
               id="registerButton" class="button" onclick="openRegisterModal()">Register</button>
