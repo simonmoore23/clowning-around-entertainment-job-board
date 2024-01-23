@@ -1,3 +1,4 @@
+
 <div class="profileContainer">
   <section class="profileContainerLeft">
     <h3><u>Live Job Adverts</u></h3>
@@ -7,9 +8,11 @@
             id="post-title"
             href="/apply/{{post.id}}"
           >{{post.jobTitle}}</a></p>
+
       </div>
-    {{/each}}
+    
   </section>
+
 
   <section class="profileContainerRight">
     <h3><u>User Details</u></h3>
@@ -22,14 +25,13 @@
       <p>Email: <span class="emailDisplay">{{user.email}}</span></p>
     </div>
 
-    
-      <div class="profileBottomRight">
-        <button
-          id="openProfileModal"
-          class="button"
-          onclick="openProfileModal()"
-        >Edit Profile</button>
-      </div>
-    
+    <div class='profileBottomRight'>
+      <button
+        id='openProfileModal'
+        class='button'
+        onclick='openProfileModal()'
+      >Edit Profile</button>
+    </div>
+{{/each}}
   </section>
 </div>

@@ -1,0 +1,33 @@
+{{apply}}
+
+{{#each posts as |post|}}
+<div class="row">
+<div class="columnApply">
+<div class="columnListing">
+    <form class="apply-form">
+    <div>
+        <div class="ml-5" name="job-title">{{post.jobTitle}}</div>
+    </div>
+
+    <div>
+        <div class="ml-5" name="salary">{{post.salary}}</div>
+    </div>
+
+    <div>
+        <div class="ml-5" name="location">{{post.location}}</div>
+    </div>
+
+    <div>
+        <div class="ml-5" name="description">{{post.description}}</div>
+    </div>
+
+    <div>
+        <!-- Add onclick event or use form submission -->
+        <button class="button ml-5 mb-5" type="submit">apply</button>
+    </div>
+    
+    </form>
+</div>
+</div>
+</div>
+{{/each}}
