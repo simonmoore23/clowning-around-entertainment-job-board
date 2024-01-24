@@ -1,30 +1,25 @@
-
-<div class="profileContainer">
-  <section class="profileContainerLeft">
+<div class='profileContainer'>
+  <section class='profileContainerLeft'>
     <h3><u>Live Job Adverts</u></h3>
     {{#each posts as |post|}}
-      <div class="profileJobListing">
-        <p><a
-            id="post-title"
-            href="/apply/{{post.id}}"
-          >{{post.jobTitle}}</a>
-<button class="button" post-id="{{post.id}}">DELETE</button>
-</p>
+      <div class='profileJobListing'>
+        <p><a id='post-title' href='/apply/{{post.id}}'>{{post.jobTitle}}</a>
+          <button class='button' post-id='{{post.id}}'>DELETE</button>
+        </p>
       </div>
-     {{/each}}
-    
+    {{/each}}
+
   </section>
 
-
-  <section class="profileContainerRight">
+  <section class='profileContainerRight'>
     <h3><u>User Details</u></h3>
-    <div class="profileUserListing">
+    <div class='profileUserListing'>
       <p>Company Name:
-        <span class="companyNameDisplay">{{user.companyName}}</span></p>
-      <p>Postcode: <span class="postcodeDisplay">{{user.postcode}}</span></p>
-      <p>Town: <span class="townNameDisplay">{{user.townName}}</span></p>
-      <p>Region: <span class="regionNameDisplay">{{user.regionName}}</span></p>
-      <p>Email: <span class="emailDisplay">{{user.email}}</span></p>
+        <span class='companyNameDisplay'>{{user.companyName}}</span></p>
+      <p>Postcode: <span class='postcodeDisplay'>{{user.postcode}}</span></p>
+      <p>Town: <span class='townNameDisplay'>{{user.townName}}</span></p>
+      <p>Region: <span class='regionNameDisplay'>{{user.regionName}}</span></p>
+      <p>Email: <span class='emailDisplay'>{{user.email}}</span></p>
 
     </div>
 
