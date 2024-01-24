@@ -284,3 +284,17 @@ a {
     color: white; /* Set your desired color */
     text-decoration: none; /* Remove the default underline */
 }
+
+.applyContainer {
+    display: flex;
+    min-height: 400px;
+    height: auto;
+    background-color: rgba(6, 34, 28, 0.805);
+    color: white;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.apply-form > div {
+    margin-bottom: 10px; /* Add space between elements in the form */
+    margin-left: 10px;
+}
