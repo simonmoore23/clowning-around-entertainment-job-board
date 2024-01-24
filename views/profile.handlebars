@@ -8,21 +8,19 @@
         </p>
       </div>
     {{/each}}
-
   </section>
-
+{{#each users as |user|}}
   <section class='profileContainerRight'>
     <h3><u>User Details</u></h3>
     <div class='profileUserListing'>
       <p>Company Name:
         <span class='companyNameDisplay'>{{user.companyName}}</span></p>
       <p>Postcode: <span class='postcodeDisplay'>{{user.postcode}}</span></p>
-      <p>Town: <span class='townNameDisplay'>{{user.townName}}</span></p>
-      <p>Region: <span class='regionNameDisplay'>{{user.regionName}}</span></p>
+      <p>Town: <span class='townNameDisplay'>{{user.town}}</span></p>
+      <p>Region: <span class='regionNameDisplay'>{{user.region}}</span></p>
       <p>Email: <span class='emailDisplay'>{{user.email}}</span></p>
-
     </div>
-
+    {{/each}}
     <div class='profileBottomRight'>
       <button
         id='openProfileModal'
@@ -30,6 +28,5 @@
         onclick='openProfileModal()'
       >Edit Profile</button>
     </div>
-
   </section>
 </div>
