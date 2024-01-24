@@ -282,7 +282,7 @@ body {
 /* All links in website will change from blue color with below settings */
 a {
     color: white; /* Set your desired color */
-    text-decoration: none; /* Remove the default underline */
+    text-decoration: underline; /* Remove the default underline */
 }
 
 .applyContainer {
@@ -297,4 +297,18 @@ a {
 .apply-form > div {
     margin-bottom: 10px; /* Add space between elements in the form */
     margin-left: 10px;
+}
+
+.job-title {
+    color: #fff;
+    margin-left: 15px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+} 
+
+.delete-button {
+    margin-left: auto;
+    text-align: right; /* This will push the delete button to the right */
 }

@@ -24,7 +24,7 @@
         <div>
           <!-- Use the mailto URI scheme without specifying a recipient -->
           <a
-            href='mailto:?subject=Job Application: {{jobTitle}}&body=I am interested in applying for the position. Please find my resume attached.'
+            href='mailto:{{user.email}}subject=Job Application: {{jobTitle}}&body=I am interested in applying for the position. Please find my resume attached.'
           >
             <button class='button ml-5 mb-5' type='button'>Apply</button>
           </a>
