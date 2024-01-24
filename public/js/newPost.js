@@ -3,7 +3,7 @@ async function newFormHandler(event) {
 
   const jobTitle = document.querySelector('#jobTitle').value;
   const description = document.querySelector('#jobDescription').value;
-  const salary = document.querySelector('#jobSalary');
+  const salary = document.querySelector('#jobSalary').value;
 
   const response = await fetch(`/posts`, {
     method: 'POST',
