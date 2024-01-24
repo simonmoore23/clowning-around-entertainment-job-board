@@ -12,7 +12,7 @@ router.get('/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['companyName', 'email'],
+          attributes: ['companyName', 'email', 'region', 'town'],
         },
       ],
     });

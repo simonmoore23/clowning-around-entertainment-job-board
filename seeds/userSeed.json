@@ -4,6 +4,8 @@
     "password": "comedyispain",
     "companyName": "The Guild of Fools and Joculators and College of Clowns",
     "postcode": "SM5 1RS",
+    "region": "Scotland",
+    "town": "Porridgeburg",
     "email": "bozo@foolsguild.com"
   },
   {
@@ -11,6 +13,8 @@
     "password": "tuSerasMange",
     "companyName": "The Best Circus in The World",
     "postcode": "PA33 1AN",
+    "region": "North West",
+    "town": "Warrington",
     "email": "notalion@geemail.com"
   },
   {
@@ -18,6 +22,8 @@
     "password": "superStrong",
     "companyName": "Muscle for hire",
     "postcode": "TA12 6LB",
+    "region": "Essex",
+    "town": "Poshington",
     "email": "bigmuscle@muscle.com"
   }
 ]

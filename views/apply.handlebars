@@ -11,7 +11,9 @@
         </div>
 
         <div>
-          <div class='ml-5' name='location'>Location: {{location}}</div>
+          <div class='ml-5' name='location'>Location:
+            {{user.town}},
+            {{user.region}}</div>
         </div>
 
         <div>
@@ -19,9 +21,11 @@
             {{description}}</div>
         </div>
 
-         <div>
+        <div>
           <!-- Use the mailto URI scheme without specifying a recipient -->
-          <a href='mailto:?subject=Job Application: {{jobTitle}}&body=I am interested in applying for the position. Please find my resume attached.'>
+          <a
+            href='mailto:?subject=Job Application: {{jobTitle}}&body=I am interested in applying for the position. Please find my resume attached.'
+          >
             <button class='button ml-5 mb-5' type='button'>Apply</button>
           </a>
         </div>
