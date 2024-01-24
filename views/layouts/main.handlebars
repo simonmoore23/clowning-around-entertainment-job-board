@@ -113,57 +113,15 @@
           /></textarea>
           <label for="jobSalary">Salary:</label>
           <input
-            type="text"
+            type="number"
             id="jobSalary"
             name="jobSalary"
-            pattern="^\£\d{1,3}(,\d{3})*(\.\d+)?$"
             placeholder="Enter Amount"
             required=""
           />
           <div class="button-container">
             <button type="submit" class="button">Submit</button>
             <button type="button" class="button" onclick="closeJobPostModal()">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-
-    <!-- PostJob modal HTML here -->
-    <div id="jobPostModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeJobPostModal()">×</span>
-        <h2>Create New Job Post:</h2>
-        <form id="jobPostForm">
-          <label for="jobTitle">Job Title:</label>
-          <input
-            type="text"
-            id="jobTitle"
-            name="jobTitle"
-            placeholder="Trapeze Artist, etc."
-            required=""
-          />
-          <label for="jobDescription">Job Description:</label>
-          <input
-            class="job-description"
-            type="text"
-            id="jobDescription"
-            name="Description"
-            placeholder="Enter details of role here"
-            required=""
-          />
-          <label for="jobSalary">Salary:</label>
-          <input
-            type="text"
-            id="jobSalary"
-            name="jobSalary"
-            pattern="^\£\d{1,3}(,\d{3})*(\.\d+)?$"
-            placeholder="Enter Amount"
-            required=""
-          />
-          <div class="button-container">
-            <button type="submit" class="button">Submit</button>
-            <button type="button" class="button"onclick="closeJobPostModal()">Cancel</button>
           </div>
         </form>
       </div>
@@ -203,6 +161,7 @@
     <script src="./js/script.js"></script>
     <script src="./js/editUser.js"></script>
     <script src="./js/deletePost.js"></script>
+    <script src="./js/newPost.js"></script>
   </body>
 
 </html>

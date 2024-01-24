@@ -170,26 +170,6 @@ function openPostJobModal() {
   document.getElementById('jobSalary').value = '';
 
   const currencyField = document.getElementById('jobSalary');
-  currencyField.addEventListener('focus', () => {
-    currencyField.type = 'number';
-  });
-
-  currencyField.addEventListener('blur', () => {
-    if (currencyField.value !== '') {
-      const amount = parseFloat(currencyField.value);
-      const formattedCurrency = formatCurrency(amount);
-      currencyField.type = 'text';
-      currencyField.value = formattedCurrency;
-    }
-  });
-
-  function formatCurrency(amount) {
-    const formatter = new Intl.NumberFormat('en-GB', {
-      style: 'currency',
-      currency: 'GBP',
-    });
-    return formatter.format(amount);
-  }
 }
 
 function closeJobPostModal() {
