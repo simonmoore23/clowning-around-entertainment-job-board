@@ -291,7 +291,7 @@ a {
     height: auto;
     background-color: rgba(6, 34, 28, 0.805);
     color: white;
-    justify-content: space-around;
+    
     align-items: stretch;
 }
 .apply-form > div {
