@@ -1,4 +1,4 @@
-const Post = require('./post');
+const Post = require('./Post');
 const User = require('./user');
 
 //associations
