@@ -19,9 +19,13 @@ It uses
 
 ## User Story
 ```md
-AS an an employer of a circus entertainment company
-I WANT to advertise my current job vacancies and save old adverts for specialist performers 
-SO THAT I can easily find new talent to join our show
+AS a recruitment company of circus & entertainment staff:
+I WANT current job vacancies to be posted and save new adverts for specialist performers,
+SO THAT employers can easily find new entertainment talent.
+I WANT to attract companies who are looking for talent, 
+SO THAT they are the ones supporting the site through a tailored membership.
+I WANT job seekers to be able to view the roles immediately when they open the site and be able to apply for them easily,
+SO THAT it makes it as simple as possible for the individuals looking for new roles.
 ```
 
 ## Acceptance Criteria
