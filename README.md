@@ -1,10 +1,19 @@
 # clowning-around-entertainment-job-board
 
 ## Description:
-The application is for businesses to be able to quickly create, and amend and upload their job adverts to attract the best talent in the market.
 
-It uses
+"Introducing our revolutionary job board exclusively tailored for the vibrant circus and entertainment industry!
 
+With our platform your business can easily find top talent for their unique roles, while job seekers can discover exciting opportunities within this dynamic field.
+
+Say goodbye to generic job listings, and hello to a specialised platform connecting professionals with their dream jobs - after all, you don’t want just anyone sticking their head in your lion's mouth!"
+
+The application is for businesses to be able to quickly create, and amend and upload their job adverts to attract the best talent in the market as a “catch all” location for finding high-quality entertainment professionals.
+
+Our product treats recruiters as members. Once they login, they are able to post their available roles to the site.
+
+Job seekers are able to visit the site and see all the available roles without having to register or login
+Job seekers can then click the apply button which will send them directly to their preferred email provider and from there they are able to message the company with their application.
 
 ## Table of Contents:
 * [License](#license)
@@ -49,15 +58,68 @@ THEN I want to be able to order them by LOCATION, JOB TYPE and JOB TITLE.
 
 ```
 ## Installation Process
-1. Clone the code from the repository.
-2. Install the following: 
-* Node.JS [Version 16.18.1](https://nodejs.org/en/blog/release/v16.18.1/)
-* Jest [Version 29.4.3](https://www.npmjs.com/package/jest)
-* Inquirer.js: [Version 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4)
-* mySQL [Version 2.18.1](https://www.npmjs.com/package/mysql)
-3. Open the cloned repository in any source code editor.
-4. Open the integrated terminal for the document and complete the respective installation guides provided above in section (2.) to ensure the cloned documentation will operate.
-5. Start the program by typing "node server.js"
+
+As this repo is deployed to Heroku, you will not need to run it locally as all database provisioning and setup is handled there.
+
+However, if you did wish to use the frontend locally, the following steps can be followed to setup to recreate a development enviroment with database functionality:
+
+  Follow the following steps to properly install this application:
+
+  * Clone the code from the repository by copying either its HTTPS, SSH key or GitHub CLI and pasting the URL into your terminal at the location where you want said cloned direction as per the following example:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+  * Open the cloned repository in any source code editor.
+
+  * Node.js must be installed. You can download the installer directly from the [Nodejs website](https://nodejs.org). Alternatively, if you have Homebrew installed as the de facto package manager for macOS, you can simply type:
+
+```bash
+brew install node
+```
+
+MySQL must be downloaded and installed also.
+You can download the installer directly from the [MySQL website](https://dev.mysql.com/downloads/installer). Alternatively, if you have Homebrew installed as the de facto package manager for macOS, you can simply type:
+
+```bash
+brew install mysql
+```
+Proficiency with the MySQL command line prompt is encouraged, but GUI's such as MySQL Workbench can also be used to provide access to the database (I personally used TablePlus during the creation of my application). 
+
+This command line application makes use of several dependencies:
+
+  * To install these packages, run the following commands from within the CLI at the root of the application:
+
+```bash
+npm i
+```
+
+We will then connect our Node.js servers to our MySQL databases to perform queries based on client requests and return responses accordingly.
+
+You will need to create a `.env` file in your root directory. This will store your configuration details for accessing MySQL such as database name and login information. Example as follows:
+
+```
+DB_NAME='YOUR DATABASE NAME'
+DB_USER='YOUR USERNAME'
+DB_PASSWORD='YOUR PASSWORD'
+```
+
+Prior to starting the server, we need to create our database and its seeded data with the following commands:
+
+Run `mysql -u root -p` from the command line and enter your MySQL password when prompted if you have one to access MySQL. 
+Create the E-Commerce database with command `source db/schema.sql`. 
+You can log out ofthe MySQL shell with `\q`.
+Seed database with `npm run seed` as notated in the "scripts" section of the `package.json` file.
+
+
+  * And finally: 
+
+  Please type the following command within the terminal to invoke the application:
+
+```bash
+npm start
+```
 
 ## Sources & Contributions
 Graham McCullough [Github](https://github.com/Grahamy27)
@@ -73,11 +135,15 @@ Github: https://github.com/simonmoore23/clowning-around-entertainment-job-board
 Heroku: https://still-depths-15165-644cc0ba8436.herokuapp.com/
 
 ## Walkthrough Video:
-[Click Here to Watch](...)
+[Click Here to Watch](https://drive.google.com/file/d/17RxVKLGV_1ITtaFn33Lt0CYdQW5Q5h2p/view)
+
 
 ## Screenshots:
 ### Figure 1. 
-![](...)
+![Wire Frame](/assets/Wireframe.png)
 ### Figure 2. 
-![](...)
-
+![Home Page](/assets/Home%20Page.png)
+### Figure 3. 
+![Adding Job Listing](/assets/Add%20Job%20Listing.png)
+### Figure 4. 
+![Updated Profile Page](/assets/Profile%20Page.png)
