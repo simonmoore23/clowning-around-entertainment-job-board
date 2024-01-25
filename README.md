@@ -67,7 +67,7 @@ Tomasz Pawlikowski [Github](https://github.com/TP4458)
 Mag Millen-Dutka [Github](https://github.com/MagMillen-Dutka)
 
 ## Repository:
-[Solution URL Link](...)
+https://github.com/simonmoore23/clowning-around-entertainment-job-board
 
 ## Walkthrough Video:
 [Click Here to Watch](...)
