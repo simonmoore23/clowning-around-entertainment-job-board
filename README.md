@@ -66,8 +66,11 @@ Lewis Reynolds [Github](https://github.com/Lllewisreynolds)
 Tomasz Pawlikowski [Github](https://github.com/TP4458)
 Mag Millen-Dutka [Github](https://github.com/MagMillen-Dutka)
 
-## Repository:
-https://github.com/simonmoore23/clowning-around-entertainment-job-board
+## Links:
+
+Github: https://github.com/simonmoore23/clowning-around-entertainment-job-board
+
+Heroku: https://still-depths-15165-644cc0ba8436.herokuapp.com/
 
 ## Walkthrough Video:
 [Click Here to Watch](...)
