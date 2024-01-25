@@ -225,9 +225,12 @@ body {
     display: flex;
     min-height: 400px;
     height: auto;
-    color: black;
     justify-content: space-around;
     align-items: stretch;
+}
+
+.profileContainer #post-title {
+    color:white;
 }
 
 .profileContainerLeft,
@@ -311,4 +314,8 @@ a {
 .delete-button {
     margin-left: auto;
     text-align: right; /* This will push the delete button to the right */
+}
+
+#post-title {
+    color: black;
 }
